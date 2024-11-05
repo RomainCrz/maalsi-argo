@@ -48,6 +48,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: app1-service
+  namespace: argo-hello-world
 spec:
   selector:
     app: app1
@@ -61,6 +62,7 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: app2-cm
+  namespace: argo-hello-world
 data:
   # Clés et valeurs
   app_name: app2
@@ -106,6 +108,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: app2-service
+  namespace: argo-hello-world
 spec:
   selector:
     app: app2
